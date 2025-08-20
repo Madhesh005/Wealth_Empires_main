@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-import BackedBy from "@/components/backed-by";
 import ProductSuite from "@/components/product-suite";
 import WhyDoola from "@/components/why-doola";
 import Resources from "@/components/resources";
@@ -11,20 +10,36 @@ import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import ChatWidget from "@/components/chat-widget";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-doola-cream">
       <Header />
-      <Hero />
-      <BackedBy />
-      <ProductSuite />
-      <WhyDoola />
-      <Resources />
-      <Perks />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
+      <Reveal animation="fade-in" offset="0px 0px -5% 0px">
+        <Hero />
+      </Reveal>
+      <Reveal animation="slide-right" delayMs={100}>
+        <ProductSuite />
+      </Reveal>
+      <Reveal animation="fade-up" delayMs={150}>
+        <WhyDoola />
+      </Reveal>
+      <Reveal animation="fade-up" delayMs={200}>
+        <Resources />
+      </Reveal>
+      <Reveal animation="zoom-in" delayMs={200}>
+        <Perks />
+      </Reveal>
+      <Reveal animation="fade-up" delayMs={150}>
+        <Testimonials />
+      </Reveal>
+      <Reveal animation="slide-left" delayMs={150}>
+        <FAQ />
+      </Reveal>
+      <Reveal animation="fade-in">
+        <FinalCTA />
+      </Reveal>
       <Footer />
       <CookieConsent />
       <ChatWidget />

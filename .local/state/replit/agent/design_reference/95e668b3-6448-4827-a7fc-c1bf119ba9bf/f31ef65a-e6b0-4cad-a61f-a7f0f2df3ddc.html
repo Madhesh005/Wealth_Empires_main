@@ -1,0 +1,724 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doola | Business-in-a-Box™ for Do'ers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'doola-cream': '#F5F2E8',
+                        'doola-yellow': '#F4D03F',
+                        'doola-gold': '#F7DC6F',
+                        'doola-dark': '#333333',
+                        'doola-light-gray': '#F9F9F9'
+                    },
+                    fontFamily: {
+                        'sans': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-doola-cream font-sans">
+    <!-- @COMPONENT: Header -->
+    <header class="bg-doola-cream border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-black">
+                        <span class="text-doola-yellow">⚡⚡</span>doola
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <div class="relative group">
+                        <button class="text-doola-dark hover:text-black font-medium flex items-center">
+                            Products <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                    </div>
+                    <a href="#" class="text-doola-dark hover:text-black font-medium">Partner with Us</a>
+                    <div class="relative group">
+                        <button class="text-doola-dark hover:text-black font-medium flex items-center">
+                            Resources <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                    </div>
+                    <a href="#" class="text-doola-dark hover:text-black font-medium">Pricing</a>
+                </nav>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center space-x-4">
+                    <span class="hidden lg:block text-sm text-doola-dark">Already Have an Account? <a href="#" class="font-medium text-black hover:underline">Sign In</a></span>
+                    <button class="hidden md:block bg-white border border-gray-300 text-doola-dark px-4 py-2 rounded-full hover:bg-gray-50 transition-colors">
+                        Get a Demo
+                    </button>
+                    <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-colors flex items-center">
+                        Create a Free Account <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section class="bg-doola-cream py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <div class="mb-4">
+                        <span class="text-sm text-doola-dark font-medium">Business-in-a-Box™</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold text-black mb-6 leading-tight">
+                        doola is for Do'ers.
+                    </h1>
+                    <p class="text-lg text-doola-dark mb-8 leading-relaxed">
+                        LLC Formation, Bookkeeping, Business Taxes, and E-Commerce Analytics—one platform, one point of contact, zero stress.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
+                            Create a Free Account <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="bg-white border border-gray-300 text-doola-dark px-8 py-3 rounded-full hover:bg-gray-50 transition-colors">
+                            Get a Demo
+                        </button>
+                    </div>
+
+                    <!-- Trustpilot Rating -->
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-doola-dark">Excellent</span>
+                        <div class="flex text-green-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-doola-dark">Trustpilot</span>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="relative">
+                    <!-- Main Yellow Circle -->
+                    <div class="relative w-80 h-80 mx-auto lg:ml-auto lg:mr-0">
+                        <div class="absolute inset-0 bg-doola-yellow rounded-full"></div>
+                        
+                        <!-- Formation Card -->
+                        <div class="absolute top-8 left-8 bg-white rounded-xl p-4 shadow-lg w-48">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium text-doola-dark">✏️ Formation</span>
+                            </div>
+                            <div class="relative">
+                                <div class="w-full bg-gray-200 rounded-full h-2 mb-2">
+                                    <div class="bg-doola-yellow h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-xs text-green-600">✓ Formation Completed</span>
+                                </div>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1">Awaiting Approval</div>
+                        </div>
+
+                        <!-- Testimonial Card -->
+                        <div class="absolute bottom-0 right-0 bg-white rounded-xl p-4 shadow-lg w-56 transform translate-x-8 translate-y-8">
+                            <!-- Professional headshot of Alex Lieberman -->
+                            <div class="flex items-start space-x-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" alt="Alex Lieberman" class="w-12 h-12 rounded-full object-cover" />
+                                <div>
+                                    <p class="text-xs text-doola-dark leading-relaxed mb-2">
+                                        "doola made it effortless"
+                                    </p>
+                                    <div>
+                                        <div class="text-xs font-medium text-black">Alex Lieberman</div>
+                                        <div class="text-xs text-gray-500">Storyarb</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Icons -->
+                        <div class="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg">
+                            <i class="fas fa-chart-line text-doola-yellow"></i>
+                        </div>
+                        <div class="absolute top-16 -left-8 bg-white rounded-full p-3 shadow-lg">
+                            <i class="fas fa-calculator text-doola-yellow"></i>
+                        </div>
+                        <div class="absolute bottom-16 -right-8 bg-white rounded-full p-3 shadow-lg">
+                            <i class="fab fa-amazon text-doola-yellow"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Backed By Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h3 class="text-lg font-medium text-doola-dark">Backed By The Best</h3>
+            </div>
+            <div class="flex items-center justify-center space-x-12 opacity-60">
+                <div class="text-2xl font-bold text-orange-500">Y</div>
+                <div class="text-xl font-bold text-orange-600">HubSpot</div>
+                <div class="text-xl font-bold text-blue-600">nexus</div>
+                <div class="text-xl font-bold text-purple-600">hustle fund</div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Backed By Section -->
+
+    <!-- @COMPONENT: Product Suite -->
+    <section class="bg-doola-cream py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <span class="text-sm text-doola-dark font-medium">Product Suite</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-4">
+                Your Back Office. Simplified.
+            </h2>
+            <p class="text-lg text-doola-dark text-center mb-12 max-w-2xl mx-auto">
+                Each tool is powerful on its own, but together? Game-changing.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
+                    Create a Free Account <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button class="bg-white border border-gray-300 text-doola-dark px-8 py-3 rounded-full hover:bg-gray-50 transition-colors">
+                    Get a Demo
+                </button>
+            </div>
+
+            <!-- Product Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Formation Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-doola-yellow rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">U.S. Business Formation</h3>
+                    <p class="text-doola-dark mb-6">
+                        Skip the paperwork. We set up your business so you can start selling faster.
+                    </p>
+                    <a href="#" class="text-black font-medium hover:underline">Start Your Business</a>
+                </div>
+
+                <!-- Analytics Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-doola-yellow rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Smart Sales Analytics</h3>
+                    <p class="text-doola-dark mb-6">
+                        Know what's selling, what's not, and how to boost your revenue.
+                    </p>
+                    <a href="#" class="text-black font-medium hover:underline">Analyze Your Sales</a>
+                </div>
+
+                <!-- Taxes Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-doola-yellow rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-invoice-dollar text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Stress-Free Taxes</h3>
+                    <p class="text-doola-dark mb-6">
+                        Stay compliant, save time, and never stress about tax season again.
+                    </p>
+                    <a href="#" class="text-black font-medium hover:underline">File Your Taxes</a>
+                </div>
+
+                <!-- Bookkeeping Card -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-doola-yellow rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-calculator text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-4">Seamless Bookkeeping</h3>
+                    <p class="text-doola-dark mb-6">
+                        No spreadsheets, no hassle, just real-time financial insights.
+                    </p>
+                    <a href="#" class="text-black font-medium hover:underline">Track Your Books</a>
+                </div>
+
+                <!-- Business-in-a-Box Card -->
+                <div class="bg-black rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 bg-doola-yellow rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-box text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Business-in-a-Box™</h3>
+                    <p class="text-gray-300 mb-6">
+                        Everything you need—Formation, Bookkeeping, Taxes, and Analytics—bundled to save you time & money.
+                    </p>
+                    <a href="#" class="text-doola-yellow font-medium hover:underline flex items-center">
+                        View Pricing <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Product Suite -->
+
+    <!-- @COMPONENT: Why Doola Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <span class="text-sm text-doola-dark font-medium">Resources</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-4">
+                Why doola?
+            </h2>
+            <p class="text-lg text-doola-dark text-center mb-12 max-w-2xl mx-auto">
+                We don't just set up your business, we set you up for success.
+            </p>
+            <p class="text-center text-doola-dark mb-12">
+                See how doola stacks up against the competition.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Do It With Doola -->
+                <div class="bg-doola-cream rounded-2xl p-8 text-center">
+                    <h3 class="text-xl font-bold text-black mb-4">Do It With doola</h3>
+                    <p class="text-doola-dark mb-6">
+                        Build your dream. We'll handle the rest.
+                    </p>
+                    <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center mx-auto">
+                        Create a Free Account <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Do It Yourself -->
+                <div class="bg-doola-light-gray rounded-2xl p-8 text-center">
+                    <h3 class="text-xl font-bold text-black mb-4">Do It Yourself</h3>
+                    <p class="text-doola-dark mb-6">
+                        Going solo? See how we compare.
+                    </p>
+                    <button class="bg-white border border-gray-300 text-doola-dark px-6 py-3 rounded-full hover:bg-gray-50 transition-colors flex items-center mx-auto">
+                        Compare <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Why Doola Section -->
+
+    <!-- @COMPONENT: Resources Section -->
+    <section class="bg-doola-cream py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <span class="text-sm text-doola-dark font-medium">Overview</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-12">
+                The Growth Playbook For Do'ers
+            </h2>
+            <p class="text-lg text-doola-dark text-center mb-16 max-w-2xl mx-auto">
+                Powerful resources to help you scale smarter and faster.
+            </p>
+
+            <h3 class="text-2xl font-bold text-black text-center mb-8">
+                Essential Reads for Do'ers.
+            </h3>
+
+            <!-- Resource Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Resource 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <!-- Business bank account concept image -->
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Business bank account setup" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-black mb-2">
+                            How To Open a US Business Bank Account
+                        </h4>
+                        <p class="text-doola-dark text-sm mb-4">
+                            Opening a business bank account is essential. Discover how to do this with this guide (that also covers international founders).
+                        </p>
+                        <a href="#" class="text-black font-medium hover:underline">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Resource 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <!-- E-commerce accounting dashboard -->
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="E-commerce accounting dashboard" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-black mb-2">
+                            E-Commerce Accounting 101: Best Guide for Business Owners in 2025
+                        </h4>
+                        <p class="text-doola-dark text-sm mb-4">
+                            E-commerce has exploded into a trillion-dollar global industry. By 2025: Driven by the convenience of online shopping...
+                        </p>
+                        <a href="#" class="text-black font-medium hover:underline">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Resource 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <!-- Tax savings and profit maximization -->
+                    <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" alt="Tax savings and profit maximization" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-black mb-2">
+                            Maximize Your Profits: Save $30K in Taxes
+                        </h4>
+                        <p class="text-doola-dark text-sm mb-4">
+                            If you're an aspiring e-commerce seller, the thought of scaling to six or even seven figures might seem like a pipe dream...
+                        </p>
+                        <a href="#" class="text-black font-medium hover:underline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center mx-auto">
+                    Explore Resources <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Resources Section -->
+
+    <!-- @COMPONENT: Perks Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <span class="text-sm text-doola-dark font-medium">Perks and Rewards</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-4">
+                Score $100K+ in Perks<br />From Top Brands Worldwide.
+            </h2>
+            <p class="text-lg text-doola-dark text-center mb-12 max-w-2xl mx-auto">
+                Exclusive deals, big savings, and founder-first tools.
+            </p>
+
+            <div class="text-center">
+                <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center mx-auto">
+                    Visit Marketplace <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Perks Section -->
+
+    <!-- @COMPONENT: Testimonials -->
+    <section class="bg-doola-cream py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-4">
+                <span class="text-sm text-doola-dark font-medium">10,000+ Founders</span>
+            </div>
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-16">
+                Built for Founders. Loved by Founders.
+            </h2>
+
+            <!-- Testimonial Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <!-- Professional headshot for Adam Fuller -->
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" alt="Adam Fuller" class="w-16 h-16 rounded-full object-cover mb-4" />
+                    <p class="text-doola-dark mb-6">
+                        "doola handled Flagaholics' legal and financial setup so we could focus on growth & delivering a great customer experience."
+                    </p>
+                    <div>
+                        <div class="font-bold text-black">Adam Fuller</div>
+                        <div class="text-sm text-doola-dark">Co-Founder of Flagaholics</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <!-- Professional headshot for Deon Bryan -->
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" alt="Deon Bryan" class="w-16 h-16 rounded-full object-cover mb-4" />
+                    <p class="text-doola-dark mb-6">
+                        "The ease of setup, combined with the resources available through doola, helped me get things done efficiently."
+                    </p>
+                    <div>
+                        <div class="font-bold text-black">Deon Bryan</div>
+                        <div class="text-sm text-doola-dark">CEO at Viteranz</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <!-- Professional headshot for Alex Lieberman -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=150&h=150" alt="Alex Lieberman" class="w-16 h-16 rounded-full object-cover mb-4" />
+                    <p class="text-doola-dark mb-6">
+                        "I thought it was very smooth, it was done within a day and all I hit was like 5 buttons."
+                    </p>
+                    <div>
+                        <div class="font-bold text-black">Alex Lieberman</div>
+                        <div class="text-sm text-doola-dark">Founder of storyarb</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Testimonials -->
+
+    <!-- @COMPONENT: FAQ Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black text-center mb-16">FAQs</h2>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">What is doola?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-doola-dark">
+                            doola is the all-in-one back-office solution for entrepreneurs. Whether you're launching a new business or scaling an existing one, doola handles the essential operations—LLC formation, bookkeeping, tax compliance, and more—so you can focus on growth. Thousands of founders trust doola to streamline their business setup, save time, and stay compliant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">Do I need to be a US citizen to work with doola?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-doola-dark">
+                            No, you don't! We work with entrepreneurs from around the world to get their businesses incorporated. Don't take our word for it, though; check out our TrustPilot Page to hear what people globally have to say about doola.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">Why should I get an LLC and a business bank account?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-doola-dark">
+                            Forming an LLC and opening a business bank account are essential steps to protect your personal assets and streamline your finances. An LLC limits your personal liability in case of legal or financial issues, while a business bank account helps you separate personal and business finances, making tax preparation easier and ensuring a more professional image for your business.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">What information do you need from me to get started?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <div class="text-doola-dark">
+                            <p class="mb-2">We don't need any documents to get started. We just need a few pieces of info from you:</p>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Your Company Name</li>
+                                <li>Your Personal Address</li>
+                                <li>Phone Number and Email (For contact purposes)</li>
+                            </ul>
+                            <p class="mt-2">Later in the process, you'll need a passport to set up your bank account.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">What is doola Bookkeeping?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <div class="text-doola-dark space-y-2">
+                            <p>doola Bookkeeping is a financial management platform that allows you to easily manage your business finances. It offers a variety of features, including:</p>
+                            <p><strong>Income and Expense Tagging:</strong> You can easily tag your income and expenses to keep track of where your money is going.</p>
+                            <p><strong>Ability to Link Multiple Bank Accounts:</strong> doola Bookkeeping lets you link multiple bank accounts to the platform, making it easy to view all of your financial information in one place.</p>
+                            <p><strong>Financial Health Reports:</strong> The platform provides financial health reports, giving you an overview of your business's financial performance to help make informed decisions.</p>
+                            <p><strong>Recordkeeping:</strong> doola Bookkeeping helps you keep track of important financial records, making tax season a breeze.</p>
+                            <p><strong>Dedicated Bookkeeping:</strong> With dedicated bookkeeping, a human bookkeeper will get to know your business, bring your books up to date, and do your book for you, start to finish.</p>
+                            <p>Overall, doola Bookkeeping streamlines your financial management, allowing you to focus on growing your business.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-gray-200 rounded-2xl">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
+                        <span class="font-medium text-black">Can doola help me with my business taxes?</span>
+                        <i class="fas fa-plus text-doola-dark transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-doola-dark">
+                            We set up your business for sales tax, obtain a reseller certificate, and handle your annual business tax filings with our in-house tax and CPA teams—ensuring compliance, maintaining good standing, and avoiding hefty penalties.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="text-black hover:underline flex items-center mx-auto">
+                    Show More <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: FAQ Section -->
+
+    <!-- @COMPONENT: Final CTA Section -->
+    <section class="bg-doola-yellow py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black mb-4">
+                Less blah,<br />More doola.
+            </h2>
+            <p class="text-lg text-doola-dark mb-8">
+                Join doola and start building today.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center justify-center">
+                    Create a Free Account <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+                <button class="bg-white border border-gray-300 text-doola-dark px-8 py-3 rounded-full hover:bg-gray-50 transition-colors">
+                    Get a Demo
+                </button>
+            </div>
+
+            <!-- Decorative Element -->
+            <div class="mt-12">
+                <!-- Business professionals celebrating success -->
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" alt="Business professionals celebrating success" class="w-64 h-40 object-cover rounded-2xl mx-auto opacity-50" />
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Final CTA Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <!-- Left Content -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="text-2xl font-bold text-black">
+                            <span class="text-doola-yellow">⚡⚡</span>doola
+                        </div>
+                    </div>
+                    <p class="text-doola-dark mb-8 max-w-md">
+                        Unify your business back office with doola—an all-in-one platform that handles LLC Formation, Bookkeeping, Taxes, and E-commerce Analytics. No paperwork. No stress. Just pure growth.
+                    </p>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div>
+                    <h3 class="text-lg font-bold text-black mb-4">Join doola's monthly newsletter</h3>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-doola-yellow">
+                        <button class="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors flex items-center">
+                            Subscribe <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-2">
+                        By subscribing you agree with our <a href="#" class="hover:underline">Privacy Policy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: Cookie Consent -->
+    <div id="cookieConsent" class="fixed bottom-4 left-4 bg-white border border-gray-200 rounded-2xl p-4 shadow-lg max-w-sm z-50">
+        <div class="flex items-start space-x-3">
+            <div class="text-2xl">🍪</div>
+            <div class="flex-1">
+                <p class="text-sm text-doola-dark mb-2">We are using cookies!</p>
+                <p class="text-xs text-gray-500 mb-3">
+                    See our <a href="#" class="hover:underline">Privacy Policy</a>.
+                </p>
+                <button onclick="closeCookieConsent()" class="bg-black text-white px-4 py-2 rounded-full text-sm hover:bg-gray-800 transition-colors">
+                    OK
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: Cookie Consent -->
+
+    <!-- @COMPONENT: Chat Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="bg-doola-yellow text-black w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-shadow flex items-center justify-center">
+            <i class="fas fa-comments text-xl"></i>
+        </button>
+    </div>
+    <!-- @END_COMPONENT: Chat Widget -->
+
+    <script>
+        // TODO: Implement real business logic, API calls, and state management
+        
+        (function() {
+            // FAQ Toggle Functionality
+            window.toggleFAQ = function(button) {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            };
+
+            // Cookie Consent
+            window.closeCookieConsent = function() {
+                document.getElementById('cookieConsent').style.display = 'none';
+            };
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Newsletter Form Handler
+            document.querySelector('footer input[type="email"]').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    // TODO: Implement newsletter subscription
+                    console.log('Newsletter subscription for:', this.value);
+                    this.value = '';
+                    alert('Thank you for subscribing!');
+                }
+            });
+
+            // Mobile Menu Toggle (placeholder)
+            document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+                // TODO: Implement mobile menu toggle
+                console.log('Mobile menu toggle clicked');
+            });
+        })();
+    </script>
+</body>
+</html>

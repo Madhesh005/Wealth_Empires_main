@@ -6,18 +6,15 @@ export default function Resources() {
     <section className="bg-doola-cream py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
-          <span className="text-sm text-doola-dark font-medium">Overview</span>
+          <span className="text-lg text-[#957800] font-bold">Overview</span>
         </div>
-        <h2 className="text-4xl lg:text-5xl font-bold text-black text-center mb-12">
+        <h2 className="text-4xl lg:text-4xl font-bold text-black text-center mb-12">
           The Growth Playbook For Do'ers
         </h2>
         <p className="text-lg text-doola-dark text-center mb-16 max-w-2xl mx-auto">
           Powerful resources to help you scale smarter and faster.
         </p>
 
-        <h3 className="text-2xl font-bold text-black text-center mb-8">
-          Essential Reads for Do'ers.
-        </h3>
 
         {/* Resource Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
