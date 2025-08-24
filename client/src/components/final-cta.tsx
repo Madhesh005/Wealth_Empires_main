@@ -26,7 +26,7 @@ export default function FinalCTA() {
 
           {/* Right Content - 3D Illustration */}
           <div className="relative flex justify-center lg:justify-end">
-            <img src={nohassle} alt="nohassleimg" />
+            <img src="https://www.doola.com/wp-content/uploads/2025/04/less-blah-more-doola.png.webp" alt="nohassleimg" />
           </div>
         </div>
       </div>
