@@ -30,17 +30,17 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trustpilot Rating */}
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-doola-dark">Excellent</span>
-              <div className="flex text-green-500">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
-                ))}
+              {/* Google Reviews */}
+              <div className="flex items-center space-x-2" data-testid="google-reviews">
+                <span className="text-sm font-medium text-black">Excellent</span>
+                <div className="flex space-x-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600">Google</span>
               </div>
-              <span className="text-sm text-doola-dark">Trustpilot</span>
             </div>
-          </div>
 
           {/* Right Content */}
           <div className="relative">

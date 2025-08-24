@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import ChatWidget from "@/components/chat-widget";
 import Reveal from "@/components/Reveal";
+import Footermain from "@/components/footer-main";
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
       <Reveal animation="fade-in">
         <FinalCTA />
       </Reveal>
-      <Footer />
+      <Footermain/>
       <CookieConsent />
       <ChatWidget />
     </div>

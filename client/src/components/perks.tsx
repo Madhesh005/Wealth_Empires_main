@@ -22,12 +22,11 @@ export default function Perks() {
             </Button>
           </div>
 
-          <div className="w-full">
+          <div className="">
             <img
               src={dummy}
               alt="Perks preview"
-              className="w-full h-auto rounded-2xl border border-gray-200 shadow-lg object-cover"
-              loading="lazy"
+              className=""
             />
           </div>
         </div>
