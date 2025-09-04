@@ -49,7 +49,7 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center mb-16">
           <div
-            className="inline-flex items-center px-4 py-2 bg-doola-yellow/10 rounded-full text-doola-yellow text-sm font-medium mb-4"
+            className="inline-flex items-center px-4 py-2 bg-doola-yellow/10 rounded-full text-[#990dd5] text-sm font-medium mb-4"
             data-testid="text-founders-count"
           >
             10,000+ Founders
@@ -60,7 +60,7 @@ export default function Testimonials() {
           >
             Built for Founders.
             <br />
-            <span className="text-doola-yellow">Loved by Founders.</span>
+            <span className="text-[#990dd5]">Loved by Founders.</span>
           </h2>
         </div>
 

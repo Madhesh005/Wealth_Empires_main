@@ -7,7 +7,7 @@ export default function WhyDoola() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
-          <span className="text-[#b08000] font-medium text-lg">Resources</span>
+          <span className="text-[#9400D3] font-medium text-lg">Resources</span>
         </div>
         <h2 className="text-4xl lg:text-3xl font-bold text-black text-center mb-4">
           Why Wealth Empires?

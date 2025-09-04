@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import nohassle from "@assets/nohassle.jpg";
+import nohassle from "@assets/nohassle.png";
 export default function FinalCTA() {
   return (
-    <section className="bg-[#fde999] py-16 rounded-[50px] mx-16 ">
+    <section className="bg-[#d6b4fc] py-16 rounded-[50px] mx-16 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center px-20">
           {/* Left Content */}
@@ -26,7 +26,7 @@ export default function FinalCTA() {
 
           {/* Right Content - 3D Illustration */}
           <div className="relative flex justify-center lg:justify-end">
-            <img src="https://www.doola.com/wp-content/uploads/2025/04/less-blah-more-doola.png.webp" alt="nohassleimg" />
+            <img src={nohassle} alt="nohassleimg" />
           </div>
         </div>
       </div>

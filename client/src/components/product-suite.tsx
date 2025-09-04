@@ -6,7 +6,7 @@ export default function ProductSuite() {
     <section className="bg-doola-cream py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-4">
-          <span className="text-lg text-doola-dark font-medium">Product Suite</span>
+          <span className="text-lg text-[#9400D3] font-medium">Product Suite</span>
         </div>
         <h2 className="text-4xl lg:text-4xl font-bold text-black text-center mb-4">
           Your Back Office. Simplified.

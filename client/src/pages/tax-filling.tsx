@@ -27,6 +27,7 @@ import Resources from "@/components/resources";
 import Testimonials from "@/components/testimonials";
 import FAQ from "@/components/faq";
 import FinalCTA from "@/components/final-cta";
+import Reveal from "@/components/Reveal";
 /**
  * Doola Tax Filing – Visual Clone
  * - Single-file TSX React component
@@ -80,22 +81,22 @@ const FauxVideoCard: React.FC = () => (
     </div>
 
     {/* On-video copy like in screenshot */}
-            {/* Right Content - Video */}
-            <div>
-              {/* YouTube Video Embed */}
-              <div className="relative rounded-xl overflow-hidden shadow-2xl" data-testid="video-player">
-                <div className="aspect-video">
-                  <iframe
-                    src="https://www.youtube.com/embed/97N56L1kjno?autoplay=1&mute=1"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="w-full h-full object-cover"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+    {/* Right Content - Video */}
+    <div>
+      {/* YouTube Video Embed */}
+      <div className="relative rounded-xl overflow-hidden shadow-2xl" data-testid="video-player">
+        <div className="aspect-video">
+          <iframe
+            src="https://www.youtube.com/embed/97N56L1kjno?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full object-cover"
+          ></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -209,261 +210,283 @@ export default function TaxFilingPage() {
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
       {/* Hero */}
-      <section className="px-16 py-16 mt-5">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h1 className="mb-6 text-4xl font-semibold ">
-              <span>do. </span>
-              <span className="text-[#0d792c]">Taxes</span> <span>Totally Compliant</span>
-            </h1>
-            <p className="mb-8 max-w-xl text-md leading-relaxed text-black-600">
-              Simplified tax preparation, filing, and compliance for entrepreneurs. Expert guidance to maximize deductions and keep your business protected.
-            </p>
-            <div className="mb-6 flex flex-wrap gap-3">
-              <PillButton className="bg-black text-white hover:bg-gray-800">File Your Taxes →</PillButton>
+      <Reveal>
+        <section className="px-16 py-16 mt-5">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+            <div>
+              <h1 className="mb-6 text-4xl font-semibold ">
+                <span>do. </span>
+                <span className="text-[#0d792c]">Taxes</span> <span>Totally Compliant</span>
+              </h1>
+              <p className="mb-8 max-w-xl text-md leading-relaxed text-black-600">
+                Simplified tax preparation, filing, and compliance for entrepreneurs. Expert guidance to maximize deductions and keep your business protected.
+              </p>
+              <div className="mb-6 flex flex-wrap gap-3">
+                <PillButton className="bg-black text-white hover:bg-gray-800">File Your Taxes →</PillButton>
+              </div>
+              <Rating />
             </div>
-            <Rating />
+            <FauxVideoCard />
           </div>
-          <FauxVideoCard />
-        </div>
-      </section>
-
+        </section>
+      </Reveal>
       {/* 3 Feature Columns */}
-      <section className="px-16 py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div className="text-center border-r-2 ">
-            <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
-              <User className="h-8 w-8 text-gray-700" />
+      <Reveal>
+        <section className="px-16 py-16">
+          <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+            <div className="text-center border-r-2 ">
+              <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
+                <User className="h-8 w-8 text-gray-700" />
+              </div>
+              <h3 className="mb-3 text-2xl font-bold">A Dedicated Tax team</h3>
+              <p className="text-gray-600">Filing taxes is complicated, we make it simple. Our experts handle everything, keeping you compliant and ahead of deadlines all year.</p>
             </div>
-            <h3 className="mb-3 text-2xl font-bold">A Dedicated Tax team</h3>
-            <p className="text-gray-600">Filing taxes is complicated, we make it simple. Our experts handle everything, keeping you compliant and ahead of deadlines all year.</p>
-          </div>
-          <div className="text-center border-r-2 px-4">
-            <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
-              <Calendar className="h-8 w-8 text-gray-700" />
+            <div className="text-center border-r-2 px-4">
+              <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
+                <Calendar className="h-8 w-8 text-gray-700" />
+              </div>
+              <h3 className="mb-3 text-2xl font-bold">Maximize Your Refunds</h3>
+              <p className="text-gray-600">Don't leave money on the table. We help you find every deduction, so you keep more of what you earn.</p>
             </div>
-            <h3 className="mb-3 text-2xl font-bold">Maximize Your Refunds</h3>
-            <p className="text-gray-600">Don't leave money on the table. We help you find every deduction, so you keep more of what you earn.</p>
-          </div>
-          <div className="text-center">
-            <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
-              <Layers3 className="h-8 w-8 text-gray-700" />
+            <div className="text-center">
+              <div className="mx-auto mb-6 grid h-16 w-16 place-items-center">
+                <Layers3 className="h-8 w-8 text-gray-700" />
+              </div>
+              <h3 className="mb-3 text-2xl font-bold">All-in-One Solution</h3>
+              <p className="text-gray-600">Our <span className="text-blue-600 underline">Business-in-a-Box Plan</span> combines expert bookkeeping and tax support to keep your finances organized all year, every year.</p>
             </div>
-            <h3 className="mb-3 text-2xl font-bold">All-in-One Solution</h3>
-            <p className="text-gray-600">Our <span className="text-blue-600 underline">Business-in-a-Box Plan</span> combines expert bookkeeping and tax support to keep your finances organized all year, every year.</p>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </Reveal>
       {/* Tax Deadlines heading */}
-      <section className="bg-gray-50 px-6 py-16 text-center">
-        <div className="mx-auto max-w-3xl">
-          <div className="mb-3 text-md font-semibold text-[#0d792c]">Tax Deadlines</div>
-          <h2 className="mb-3 text-4xl font-extrabold">Never Miss a Tax Deadline.</h2>
-          <p className="text-lg text-gray-600">We keep you on track so you file on time, every time.</p>
-        </div>
-      </section>
-
+      <Reveal>
+        <section className="bg-gray-50 px-6 py-16 text-center">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-3 text-md font-semibold text-[#0d792c]">Tax Deadlines</div>
+            <h2 className="mb-3 text-4xl font-extrabold">Never Miss a Tax Deadline.</h2>
+            <p className="text-lg text-gray-600">We keep you on track so you file on time, every time.</p>
+          </div>
+        </section>
+      </Reveal>
       {/* SMLLC + C-Corp and helper card */}
-      <section className="px-6 py-16">
-        <div className="mx-auto  grid max-w-7xl gap-16 lg:grid-cols-2">
-          <HelperCard />
-          <div className="space-y-10 pt-10">
-            <div>
-              <h3 className="mb-1 text-3xl font-bold text-black">Single Member LLCs and C-Corporations</h3>
-              <p className="mb-6 text-black">Deadline: April 15th, 2025</p>
-              <div className="space-y-10">
-                <div>
-                  <div className="mb-1 font-semibold text-2md">For US Residents with a SMLLC</div>
-                  <p className="text-black"><span className="text-blue-600 ">Schedule C</span>, Profit or Loss from Single Member LLC.</p>
-                </div>
-                <div>
-                  <div className="mb-1 font-semibold">For US Non-Residents with a SMLLC and C-Corporations</div>
-                  <p className="text-black"><span className="text-blue-600 ">Form 1120</span>, US Corporation Tax Return</p>
-                  <p className="text-black"><span className="text-blue-600 ">Form 5472</span>, Information Return of a 25% Foreign-Owned U.S. Corporation or a Foreign Corporation Engaged in a U.S. Trade or Business.</p>
+      <Reveal>
+        <section className="px-6 py-16">
+          <div className="mx-auto  grid max-w-7xl gap-16 lg:grid-cols-2">
+            <HelperCard />
+            <div className="space-y-10 pt-10">
+              <div>
+                <h3 className="mb-1 text-3xl font-bold text-black">Single Member LLCs and C-Corporations</h3>
+                <p className="mb-6 text-black">Deadline: April 15th, 2025</p>
+                <div className="space-y-10">
+                  <div>
+                    <div className="mb-1 font-semibold text-2md">For US Residents with a SMLLC</div>
+                    <p className="text-black"><span className="text-blue-600 ">Schedule C</span>, Profit or Loss from Single Member LLC.</p>
+                  </div>
+                  <div>
+                    <div className="mb-1 font-semibold">For US Non-Residents with a SMLLC and C-Corporations</div>
+                    <p className="text-black"><span className="text-blue-600 ">Form 1120</span>, US Corporation Tax Return</p>
+                    <p className="text-black"><span className="text-blue-600 ">Form 5472</span>, Information Return of a 25% Foreign-Owned U.S. Corporation or a Foreign Corporation Engaged in a U.S. Trade or Business.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </Reveal>
       {/* Partnerships & S-Corp with upload */}
-      <section className="bg-gray-50 px-20 py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
-          <div>
-            <h2 className="mb-2 text-3xl font-bold">Multiple Member LLCs (Partnerships)<br />and S-Corporations</h2>
-            <p className="mb-8 text-gray-600">Deadline: March 17th, 2025</p>
-            <div className="space-y-8">
-              <div>
-                <h4 className="mb-1 text-xl font-semibold">For Multi Member LLCs</h4>
-                <p className="text-gray-600"><span className="text-blue-600">Form 1065</span>, US Return of Partnership Income + K-1 Forms</p>
-              </div>
-              <div>
-                <h4 className="mb-1 text-xl font-semibold">For S-Corporations</h4>
-                <p className="text-gray-600"><span className="text-blue-600">Form 1120-S</span>, Income Tax Return for an S Corporation + K-1 Forms</p>
-              </div>
-            </div>
-          </div>
-          <div className="relative grid place-items-center">
-            <UploadWidget />
-          </div>
-        </div>
-      </section>
-
-      {/* Form 1099 CTA */}
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-6xl  rounded-3xl bg-[#d0f4db] p-10 py-1">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+      <Reveal>
+        <section className="bg-gray-50 px-20 py-16">
+          <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="mb-4 text-4xl font-extrabold">Need to File Form 1099?</h2>
-              <p className="mb-2 text-lg text-gray-700">No stress, no confusion—just fast, accurate 1099 filing.</p>
-              <p className="mb-8 text-gray-600">We handle the details so you stay compliant and worry-free.</p>
-              <PillButton className="bg-black text-white hover:bg-gray-800">Start your Business →</PillButton>
-            </div>
-            <div className="grid place-items-center">
-              <img src={Taxnotice} alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sales Tax Map */}
-      <section className="bg-gray-50 px-6 py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-          <div>
-            <h2 className="mb-4 text-4xl font-extrabold leading-tight">Check Sales Tax Rates<br />in Any State.</h2>
-            <p className="mb-8 text-lg text-gray-600">Explore sales tax rates across the U.S. with our interactive map.</p>
-            <PillButton className="bg-black text-white hover:bg-gray-800">Check Sales Tax Rates →</PillButton>
-          </div>
-          <div className="rounded-2xl p-8 shadow">
-            <img src={mapimg} alt="map_image" />
-          </div>
-        </div>
-      </section>
-
-      {/* Expert Team */}
-      <section className="px-6 py-16 text-center">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-extrabold">Your Expert Team, <br className="hidden sm:block" /> Handling It All.</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {[{ title: "Bookkeeper", icon: User, copy: "Keeps your finances in check, organizes your books, and prepares monthly reports. Got questions? They're just an email away." }, { title: "Tax Coordinator", icon: User, copy: "Guides you through the tax process, helps gather documents, and ensures everything is ready for a seamless filing experience." }, { title: "Tax Advisor", icon: User, copy: "Licensed professionals handling everything from filing your taxes to year-round advisory support, so you're always covered." }].map((c, i) => (
-              <div key={i} className="text-left px-10">
-                <div className="mb-6 grid h-12 w-12 place-items-center">
-                  <c.icon className="h-8 w-8 text-gray-700 " />
+              <h2 className="mb-2 text-3xl font-bold">Multiple Member LLCs (Partnerships)<br />and S-Corporations</h2>
+              <p className="mb-8 text-gray-600">Deadline: March 17th, 2025</p>
+              <div className="space-y-8">
+                <div>
+                  <h4 className="mb-1 text-xl font-semibold">For Multi Member LLCs</h4>
+                  <p className="text-gray-600"><span className="text-blue-600">Form 1065</span>, US Return of Partnership Income + K-1 Forms</p>
                 </div>
-                <h3 className="mb-3 text-2xl font-bold">{c.title}</h3>
-                <p className="text-black">{c.copy}</p>
+                <div>
+                  <h4 className="mb-1 text-xl font-semibold">For S-Corporations</h4>
+                  <p className="text-gray-600"><span className="text-blue-600">Form 1120-S</span>, Income Tax Return for an S Corporation + K-1 Forms</p>
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="relative grid place-items-center">
+              <UploadWidget />
+            </div>
           </div>
-          <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">View Pricing →</PillButton>
-        </div>
-      </section>
-
-      {/* Business-in-a-Box Pricing Card */}
-      <section className="bg-[#d0f4db] px-6 py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
-          <div className="p-10">
-            <h2 className="text-4xl font-extrabold">What If Today Was The Day?</h2>
-            <br />
-            <p>Your dream business is waiting, let's get it off the ground.</p>
-            <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">
-              Plans & Pricing →
-            </PillButton>
+        </section>
+      </Reveal>
+      {/* Form 1099 CTA */}
+      <Reveal>
+        <section className="px-6 py-16">
+          <div className="mx-auto max-w-6xl  rounded-3xl bg-[#d0f4db] p-10 py-1">
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <div>
+                <h2 className="mb-4 text-4xl font-extrabold">Need to File Form 1099?</h2>
+                <p className="mb-2 text-lg text-gray-700">No stress, no confusion—just fast, accurate 1099 filing.</p>
+                <p className="mb-8 text-gray-600">We handle the details so you stay compliant and worry-free.</p>
+                <PillButton className="bg-black text-white hover:bg-gray-800">Start your Business →</PillButton>
+              </div>
+              <div className="grid place-items-center">
+                <img src={Taxnotice} alt="" />
+              </div>
+            </div>
           </div>
-
-          <div className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="flex flex-col">
-              <div className="flex items-start gap-4">
-                <div className="flex-grow">
-                  <div className="flex items-center gap-2">
-                    <Rocket className="h-5 w-5 text-gray-700" />
-                    <h3 className="text-xl font-bold text-gray-900">Business-in-a-Box™</h3>
+        </section>
+      </Reveal>
+      {/* Sales Tax Map */}
+      <Reveal>
+        <section className="bg-gray-50 px-6 py-16">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+            <div>
+              <h2 className="mb-4 text-4xl font-extrabold leading-tight">Check Sales Tax Rates<br />in Any State.</h2>
+              <p className="mb-8 text-lg text-gray-600">Explore sales tax rates across the U.S. with our interactive map.</p>
+              <PillButton className="bg-black text-white hover:bg-gray-800">Check Sales Tax Rates →</PillButton>
+            </div>
+            <div className="rounded-2xl p-8 shadow">
+              <img src={mapimg} alt="map_image" />
+            </div>
+          </div>
+        </section>
+      </Reveal>
+      {/* Expert Team */}
+      <Reveal>
+        <section className="px-6 py-16 text-center">
+          <div className="mx-auto max-w-7xl">
+            <h2 className="text-4xl font-extrabold">Your Expert Team, <br className="hidden sm:block" /> Handling It All.</h2>
+            <div className="mt-12 grid gap-8 md:grid-cols-3">
+              {[{ title: "Bookkeeper", icon: User, copy: "Keeps your finances in check, organizes your books, and prepares monthly reports. Got questions? They're just an email away." }, { title: "Tax Coordinator", icon: User, copy: "Guides you through the tax process, helps gather documents, and ensures everything is ready for a seamless filing experience." }, { title: "Tax Advisor", icon: User, copy: "Licensed professionals handling everything from filing your taxes to year-round advisory support, so you're always covered." }].map((c, i) => (
+                <div key={i} className="text-left px-10">
+                  <div className="mb-6 grid h-12 w-12 place-items-center">
+                    <c.icon className="h-8 w-8 text-gray-700 " />
                   </div>
-                  <div className="mt-4 text-gray-600 leading-relaxed">
-                    Dedicated Human Bookkeeper + Bookkeeping Software + Business Analytics Software + State & IRS Tax Filings + CPA Consultation.
-                  </div>
+                  <h3 className="mb-3 text-2xl font-bold">{c.title}</h3>
+                  <p className="text-black">{c.copy}</p>
                 </div>
-                <div className="flex flex-col items-end">
-                  <div className="rounded-2xl bg-gray-50 px-6 py-3">
+              ))}
+            </div>
+            <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">View Pricing →</PillButton>
+          </div>
+        </section>
+      </Reveal>
+      {/* Business-in-a-Box Pricing Card */}
+      <Reveal>
+        <section className="bg-[#d6b4fc] px-6 py-16">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+            <div className="p-10">
+              <h2 className="text-4xl font-extrabold">What If Today Was The Day?</h2>
+              <br />
+              <p>Your dream business is waiting, let's get it off the ground.</p>
+              <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">
+                Plans & Pricing →
+              </PillButton>
+            </div>
+
+            <div className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex flex-col">
+                <div className="flex items-start gap-4">
+                  <div className="flex-grow">
                     <div className="flex items-center gap-2">
-                      <span className="text-2xl font-bold text-gray-900">$2,999</span>
-                      <span className="text-gray-600">/yr</span>
+                      <Rocket className="h-5 w-5 text-gray-700" />
+                      <h3 className="text-xl font-bold text-gray-900">Business-in-a-Box™</h3>
+                    </div>
+                    <div className="mt-4 text-gray-600 leading-relaxed">
+                      Dedicated Human Bookkeeper + Bookkeeping Software + Business Analytics Software + State & IRS Tax Filings + CPA Consultation.
                     </div>
                   </div>
-                  <button className="mt-4 rounded-full p-3 bg-[#eeeeee] text-black hover:bg-black hover:text-white transition-colors">
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
+                  <div className="flex flex-col items-end">
+                    <div className="rounded-2xl bg-gray-50 px-6 py-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold text-gray-900">$2,999</span>
+                        <span className="text-gray-600">/yr</span>
+                      </div>
+                    </div>
+                    <button className="mt-4 rounded-full p-3 bg-[#eeeeee] text-black hover:bg-black hover:text-white transition-colors">
+                      <ChevronRight className="h-5 w-5" />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <Resources />
+        </section>
+      </Reveal>
+      <Reveal>
+        <Resources />
+      </Reveal>
       {/* Extras */}
-      <section className="bg-gray-50 px-6 py-16">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-4xl font-extrabold">The Extras That Set You Up for Success.</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="rounded-3xl bg-yellow-100 p-8">
-              <div className="mb-6 grid h-12 w-12 place-items-center"><Rocket className="h-8 w-8 text-gray-700" /></div>
-              <h3 className="mb-3 text-2xl font-bold">Incorporation</h3>
-              <p className="mb-6 text-gray-700">We simplify incorporation by handling all paperwork and support, so you can focus on growth.</p>
-              <button className="mb-6 font-semibold text-yellow-700 hover:underline">Start Your Business →</button>
-              <div className="rounded-xl bg-white p-4">
-                <div className="mb-2 flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                  <span className="text-sm font-semibold">Formation Completed</span>
-                </div>
-                <div className="space-y-1 text-xs text-gray-600">
-                  <div>✓ Operating Agreement</div>
-                  <div>✓ Company Profile</div>
-                </div>
-              </div>
-            </div>
-            <div className="rounded-3xl bg-pink-100 p-8">
-              <div className="mb-6 grid h-12 w-12 place-items-center"><Sparkles className="h-8 w-8 text-gray-700" /></div>
-              <h3 className="mb-3 text-2xl font-bold">Accounting & Bookkeeping</h3>
-              <p className="mb-6 text-gray-700">We deliver expert accounting and bookkeeping services with precision, and industry-wide expertise.</p>
-              <button className="mb-6 font-semibold text-pink-700 hover:underline">Analyze Your Sales →</button>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-orange-400" /><span className="text-sm">Total Orders</span></div>
-                  <span className="text-sm font-semibold">213</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-green-400" /><span className="text-sm">Total Orders</span></div>
-                  <span className="text-sm font-semibold">189</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-gray-300" /><span className="text-sm text-gray-400">Total Orders</span></div>
-                  <span className="text-sm text-gray-400">82</span>
+      <Reveal>
+        <section className="bg-gray-50 px-6 py-16">
+          <div className="mx-auto max-w-7xl">
+            <h2 className="mb-12 text-center text-4xl font-extrabold">The Extras That Set You Up for Success.</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="rounded-3xl bg-yellow-100 p-8">
+                <div className="mb-6 grid h-12 w-12 place-items-center"><Rocket className="h-8 w-8 text-gray-700" /></div>
+                <h3 className="mb-3 text-2xl font-bold">Incorporation</h3>
+                <p className="mb-6 text-gray-700">We simplify incorporation by handling all paperwork and support, so you can focus on growth.</p>
+                <button className="mb-6 font-semibold text-yellow-700 hover:underline">Start Your Business →</button>
+                <div className="rounded-xl bg-white p-4">
+                  <div className="mb-2 flex items-center gap-2">
+                    <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                    <span className="text-sm font-semibold">Formation Completed</span>
+                  </div>
+                  <div className="space-y-1 text-xs text-gray-600">
+                    <div>✓ Operating Agreement</div>
+                    <div>✓ Company Profile</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="rounded-3xl bg-blue-100 p-8">
-              <div className="mb-6 grid h-12 w-12 place-items-center"><Clock className="h-8 w-8 text-gray-700" /></div>
-              <h3 className="mb-3 text-2xl font-bold">Trademark & Licensing</h3>
-              <p className="mb-6 text-gray-700">We safeguard your brand’s identity with expert trademark services, protecting its integrity and uniqueness.</p>
-              <button className="mb-6 font-semibold text-blue-700 hover:underline">Track Your Books →</button>
-              <div className="rounded-xl bg-white p-4">
-                <div className="text-sm text-blue-600">Total Revenue</div>
-                <div className="text-xl font-bold text-blue-600">$112,780</div>
-                <svg className="mt-2 h-8 w-full" viewBox="0 0 120 30">
-                  <path d="M0,25 Q30,15 60,20 T120,10" stroke="#3b82f6" strokeWidth="3" fill="none" />
-                  <circle cx="120" cy="10" r="3" fill="#3b82f6" />
-                </svg>
+              <div className="rounded-3xl bg-pink-100 p-8">
+                <div className="mb-6 grid h-12 w-12 place-items-center"><Sparkles className="h-8 w-8 text-gray-700" /></div>
+                <h3 className="mb-3 text-2xl font-bold">Accounting & Bookkeeping</h3>
+                <p className="mb-6 text-gray-700">We deliver expert accounting and bookkeeping services with precision, and industry-wide expertise.</p>
+                <button className="mb-6 font-semibold text-pink-700 hover:underline">Analyze Your Sales →</button>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-orange-400" /><span className="text-sm">Total Orders</span></div>
+                    <span className="text-sm font-semibold">213</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-green-400" /><span className="text-sm">Total Orders</span></div>
+                    <span className="text-sm font-semibold">189</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-gray-300" /><span className="text-sm text-gray-400">Total Orders</span></div>
+                    <span className="text-sm text-gray-400">82</span>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-3xl bg-blue-100 p-8">
+                <div className="mb-6 grid h-12 w-12 place-items-center"><Clock className="h-8 w-8 text-gray-700" /></div>
+                <h3 className="mb-3 text-2xl font-bold">Trademark & Licensing</h3>
+                <p className="mb-6 text-gray-700">We safeguard your brand’s identity with expert trademark services, protecting its integrity and uniqueness.</p>
+                <button className="mb-6 font-semibold text-blue-700 hover:underline">Track Your Books →</button>
+                <div className="rounded-xl bg-white p-4">
+                  <div className="text-sm text-blue-600">Total Revenue</div>
+                  <div className="text-xl font-bold text-blue-600">$112,780</div>
+                  <svg className="mt-2 h-8 w-full" viewBox="0 0 120 30">
+                    <path d="M0,25 Q30,15 60,20 T120,10" stroke="#3b82f6" strokeWidth="3" fill="none" />
+                    <circle cx="120" cy="10" r="3" fill="#3b82f6" />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
-      <Footermain />
+        </section>
+      </Reveal>
+      <Reveal>
+        <Testimonials />
+      </Reveal>
+      <Reveal>
+        <FAQ />
+      </Reveal>
+      <Reveal>
+        <FinalCTA />
+      </Reveal>
+      <Reveal>
+        <Footermain />
+      </Reveal>
     </div>
   );
 }

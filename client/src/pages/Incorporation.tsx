@@ -37,6 +37,7 @@ import Testimonials from "@/components/testimonials";
 import Resources from "@/components/resources";
 import Footermain from "@/components/footer-main";
 import FinalCTA from "@/components/final-cta";
+import Reveal from "@/components/Reveal";
 const PillButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
     className = "",
     children,
@@ -466,490 +467,506 @@ export default function Incorporation() {
         <div className="font-sans antialiased bg-white text-gray-900">
             {/* Header */}
             <Header />
+            <Reveal animation="fade-in" offset="0px 0px -5% 0px" >
+                {/* Hero */}
+                <section className="px-16 py-16 mt-5">
+                    <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+                        <div>
+                            <h1 className="mb-6 text-5xl font-semibold ">
+                                <span>do. </span>
+                                <span className="text-[#0d792c]">Analytics</span> <span>Accurately</span>
+                            </h1>
+                            <p className="mb-8 max-w-xl text-md leading-relaxed text-black-600">
+                                Turn your business and ad data into powerful insights. Track performance, measure ad spend, identify trends, and make confident decisions that drive real results.
 
-            {/* Hero */}
-            <section className="px-16 py-16 mt-5">
-                <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
-                    <div>
-                        <h1 className="mb-6 text-5xl font-semibold ">
-                            <span>do. </span>
-                            <span className="text-[#0d792c]">Analytics</span> <span>Accurately</span>
-                        </h1>
-                        <p className="mb-8 max-w-xl text-md leading-relaxed text-black-600">
-                            Turn your business and ad data into powerful insights. Track performance, measure ad spend, identify trends, and make confident decisions that drive real results.
-
-                        </p>
-                        <div className="mb-6 flex flex-wrap gap-3">
-                            <PillButton className="bg-black text-white hover:bg-gray-800">Analyse your sales →</PillButton>
-                        </div>
-                        <Rating />
-                    </div>
-                    <FauxVideoCard />
-                </div>
-            </section>
-
-            {/* Services Section */}
-            <section
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-                data-testid="services-section"
-            >
-                <div className="text-center mb-12">
-                    <h2
-                        className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
-                        data-testid="services-headline"
-                    >
-                        Start Smart. Stay Compliant.
-                    </h2>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className="group bg-white hover:bg-doola-yellow/60 rounded-2xl p-8 border border-gray-100 transition-all duration-300 cursor-pointer"
-                            data-testid={`service-card-${index}`}
-                        >
-                            <div className="space-y-4">
-                                <div
-                                    className="text-gray-600 group-hover:text-gray-800"
-                                    data-testid={`service-icon-${index}`}
-                                >
-                                    {service.icon}
-                                </div>
-
-                                <h3
-                                    className="text-xl font-semibold text-gray-900"
-                                    data-testid={`service-title-${index}`}
-                                >
-                                    {service.title}
-                                </h3>
-
-                                <p
-                                    className="text-gray-600 text-sm leading-relaxed"
-                                    data-testid={`service-description-${index}`}
-                                >
-                                    {service.description}
-                                </p>
-
-                                <div className="pt-2">
-                                    <button
-                                        className="flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:text-blue-700"
-                                        data-testid={`service-link-${index}`}
-                                    >
-                                        {service.link}
-                                        <ArrowRight className="ml-1 h-3 w-3" />
-                                    </button>
-                                </div>
+                            </p>
+                            <div className="mb-6 flex flex-wrap gap-3">
+                                <PillButton className="bg-black text-white hover:bg-gray-800">Analyse your sales →</PillButton>
                             </div>
+                            <Rating />
                         </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* Process Flow Section */}
-            <section
-                ref={sectionRef}
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-                data-testid="process-flow-section"
-            >
-                {/* Header */}
-                <div className="text-center mb-16">
-                    <h2
-                        className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8"
-                        data-testid="process-headline"
-                    >
-                        Launch in No Time.
-                    </h2>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button
-                            className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium text-lg"
-                            data-testid="button-start-business"
-                        >
-                            Start Your Business <ArrowRight className="ml-2 h-5 w-5" />
-                        </Button>
-                        <Button
-                            variant="secondary"
-                            className="px-8 py-3 bg-gray-100 text-gray-900 rounded-full hover:bg-gray-200 transition-colors font-medium text-lg"
-                            data-testid="button-free-consultation"
-                        >
-                            Free Consultation
-                        </Button>
+                        <FauxVideoCard />
                     </div>
-                </div>
-
-                {/* Process Flow */}
-                <div className="relative max-w-6xl mx-auto">
-                    {/* Timeline Line */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-200">
-                        <div
-                            className="w-full bg-doola-yellow transition-all duration-500 ease-out"
-                            style={{ height: progressHeight }}
-                        />
+                </section>
+            </Reveal>
+            {/* Services Section */}
+            <Reveal>
+                <section
+                    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+                    data-testid="services-section"
+                >
+                    <div className="text-center mb-12">
+                        <h2
+                            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+                            data-testid="services-headline"
+                        >
+                            Start Smart. Stay Compliant.
+                        </h2>
                     </div>
 
-                    {/* Steps */}
-                    <div className="space-y-24">
-                        {steps.map((step, index) => (
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {services.map((service, index) => (
                             <div
                                 key={index}
-                                ref={(el) => (stepRefs.current[index] = el)}
-                                className={`relative flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                                    }`}
-                                data-testid={`process-step-${index}`}
+                                className="group bg-white hover:bg-doola-yellow/60 rounded-2xl p-8 border border-gray-100 transition-all duration-300 cursor-pointer"
+                                data-testid={`service-card-${index}`}
                             >
-                                {/* Step Content */}
-                                <div
-                                    className={`w-5/12 ${index % 2 === 0 ? "text-right pr-20" : "text-left pl-20"
-                                        }`}
-                                >
+                                <div className="space-y-4">
                                     <div
-                                        className={`inline-block px-4 py-2 rounded-full text-sm font-medium mb-6 ${activeStep >= index
-                                            ? "bg-doola-yellow text-gray-900"
-                                            : "bg-gray-100 text-gray-600"
-                                            }`}
-                                        data-testid={`step-badge-${index}`}
+                                        className="text-gray-600 group-hover:text-gray-800"
+                                        data-testid={`service-icon-${index}`}
                                     >
-                                        {step.badge}
+                                        {service.icon}
                                     </div>
+
                                     <h3
-                                        className="text-2xl font-bold text-gray-900 leading-tight"
-                                        data-testid={`step-title-${index}`}
+                                        className="text-xl font-semibold text-gray-900"
+                                        data-testid={`service-title-${index}`}
                                     >
-                                        {step.title}
+                                        {service.title}
                                     </h3>
-                                </div>
 
-                                {/* Timeline Shape */}
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-6 border-4 border-white z-10">
-                                    <div
-                                        className={`w-full h-full transition-all duration-500 ${activeStep >= index
-                                            ? "bg-doola-yellow rounded-full"
-                                            : "bg-white border-2 border-gray-300 rounded-sm"
-                                            }`}
-                                        data-testid={`step-shape-${index}`}
-                                    />
-                                </div>
-
-                                {/* Step Details */}
-                                <div
-                                    className={`w-5/12 ${index % 2 === 0 ? "pl-20" : "pr-20"
-                                        }`}
-                                >
-                                    <div
-                                        className="bg-doola-yellow/20 rounded-2xl p-8"
-                                        data-testid={`step-details-${index}`}
+                                    <p
+                                        className="text-gray-600 text-sm leading-relaxed"
+                                        data-testid={`service-description-${index}`}
                                     >
-                                        <p className="text-gray-700 mb-6 leading-relaxed">
-                                            {step.details.title}
-                                        </p>
+                                        {service.description}
+                                    </p>
 
-                                        <div className="space-y-4 mb-6">
-                                            {step.details.items.map((item: any, itemIndex: number) => (
-                                                <div key={itemIndex} className="flex items-start space-x-3">
-                                                    <CheckCircle className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                                                    <div>
-                                                        <p className="font-medium text-gray-900">{item.title}</p>
-                                                        {item.subtitle && (
-                                                            <p className="text-sm text-gray-600 mt-1">
-                                                                {item.subtitle}
-                                                            </p>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {step.details.duration && (
-                                            <div className="flex items-center space-x-2 text-gray-600">
-                                                <Clock className="h-4 w-4" />
-                                                <span className="text-sm font-medium">
-                                                    {step.details.duration}
-                                                </span>
-                                            </div>
-                                        )}
-
-                                        {step.details.duration2 && (
-                                            <div className="flex items-center space-x-2 text-gray-600 mt-2">
-                                                <Clock className="h-4 w-4" />
-                                                <span className="text-sm font-medium">
-                                                    {step.details.duration2}
-                                                </span>
-                                            </div>
-                                        )}
-
-                                        {step.details.hasButton && (
-                                            <div className="mt-6">
-                                                <Button
-                                                    className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
-                                                    data-testid="button-start-your-business-final"
-                                                >
-                                                    Start Your Business
-                                                    <ArrowRight className="ml-2 h-5 w-5" />
-                                                </Button>
-                                            </div>
-                                        )}
+                                    <div className="pt-2">
+                                        <button
+                                            className="flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:text-blue-700"
+                                            data-testid={`service-link-${index}`}
+                                        >
+                                            {service.link}
+                                            <ArrowRight className="ml-1 h-3 w-3" />
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Business Type Section */}
-            <section
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-                data-testid="business-type-section"
-            >
-                {/* Header */}
-                <div className="text-center mb-12">
-                    <h2
-                        className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
-                        data-testid="business-type-headline"
-                    >
-                        LLC or C-Corp?
-                        <br />
-                        We'll Help You Decide.
-                    </h2>
-
-                    <button
-                        className="flex items-center mx-auto text-blue-600 hover:text-blue-700 font-medium"
-                        data-testid="take-quiz-link"
-                    >
-                        Take our Quiz <ArrowRight className="ml-1 h-4 w-4" />
-                    </button>
-                </div>
-
-                {/* Tabs */}
-                <div className="flex justify-center mb-12">
-                    <div className="flex bg-gray-50 rounded-lg p-1" data-testid="business-type-tabs">
-                        <button
-                            onClick={() => switchBusinessType("LLC")}
-                            className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "LLC"
-                                ? "bg-white text-gray-900 shadow-sm"
-                                : "text-gray-600 hover:text-gray-900"
-                                }`}
-                            data-testid="tab-llc"
+                </section>
+            </Reveal>
+                {/* Process Flow Section */}
+                <Reveal>
+                <section
+                    ref={sectionRef}
+                    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+                    data-testid="process-flow-section"
+                >
+                    {/* Header */}
+                    <div className="text-center mb-16">
+                        <h2
+                            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8"
+                            data-testid="process-headline"
                         >
-                            <Users className="h-4 w-4" />
-                            <span>LLC</span>
-                        </button>
-                        <button
-                            onClick={() => switchBusinessType("C-Corp")}
-                            className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "C-Corp"
-                                ? "bg-white text-gray-900 shadow-sm"
-                                : "text-gray-600 hover:text-gray-900"
-                                }`}
-                            data-testid="tab-c-corp"
-                        >
-                            <Building className="h-4 w-4" />
-                            <span>C-Corp</span>
-                        </button>
-                        <button
-                            onClick={() => switchBusinessType("S-Corp")}
-                            className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "S-Corp"
-                                ? "bg-white text-gray-900 shadow-sm"
-                                : "text-gray-600 hover:text-gray-900"
-                                }`}
-                            data-testid="tab-s-corp"
-                        >
-                            <Edit className="h-4 w-4" />
-                            <span>S-Corp</span>
-                        </button>
+                            Launch in No Time.
+                        </h2>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                                className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium text-lg"
+                                data-testid="button-start-business"
+                            >
+                                Start Your Business <ArrowRight className="ml-2 h-5 w-5" />
+                            </Button>
+                            <Button
+                                variant="secondary"
+                                className="px-8 py-3 bg-gray-100 text-gray-900 rounded-full hover:bg-gray-200 transition-colors font-medium text-lg"
+                                data-testid="button-free-consultation"
+                            >
+                                Free Consultation
+                            </Button>
+                        </div>
                     </div>
-                </div>
 
-                {/* Content */}
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    {/* Left Column - Image */}
-                    <div className="relative">
-                        <div
-                            className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-900 to-orange-800"
-                            style={{ width: "542px", height: "492px" }}
-                            data-testid="business-type-image"
-                        >
-                            <img
-                                src={businessTypes[activeType].image}
-                                alt="Business owner"
-                                className="w-full h-full object-cover rounded-2xl"
+                    {/* Process Flow */}
+                    <div className="relative max-w-6xl mx-auto">
+                        {/* Timeline Line */}
+                        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-200">
+                            <div
+                                className="w-full bg-doola-yellow transition-all duration-500 ease-out"
+                                style={{ height: progressHeight }}
                             />
-                            {businessTypes[activeType].overlayText && (
-                                <div className="absolute bottom-6 left-6" data-testid="image-overlay-text">
-                                    <div className="bg-black/70 rounded-lg p-4 text-white backdrop-blur-sm">
-                                        <p className="text-lg leading-relaxed">
-                                            <span className="font-semibold">Siddharth</span> is an
-                                            <br />
-                                            <span className="font-semibold">Amazon Seller</span> who
-                                            <br />
-                                            started a <span className="font-semibold text-doola-yellow">US LLC</span>
-                                            <br />
-                                            from <span className="font-semibold">India</span>.
-                                        </p>
+                        </div>
+
+                        {/* Steps */}
+                        <div className="space-y-24">
+                            {steps.map((step, index) => (
+                                <div
+                                    key={index}
+                                    ref={(el) => (stepRefs.current[index] = el)}
+                                    className={`relative flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                                        }`}
+                                    data-testid={`process-step-${index}`}
+                                >
+                                    {/* Step Content */}
+                                    <div
+                                        className={`w-5/12 ${index % 2 === 0 ? "text-right pr-20" : "text-left pl-20"
+                                            }`}
+                                    >
+                                        <div
+                                            className={`inline-block px-4 py-2 rounded-full text-sm font-medium mb-6 ${activeStep >= index
+                                                ? "bg-doola-yellow text-gray-900"
+                                                : "bg-gray-100 text-gray-600"
+                                                }`}
+                                            data-testid={`step-badge-${index}`}
+                                        >
+                                            {step.badge}
+                                        </div>
+                                        <h3
+                                            className="text-2xl font-bold text-gray-900 leading-tight"
+                                            data-testid={`step-title-${index}`}
+                                        >
+                                            {step.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Timeline Shape */}
+                                    <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-6 border-4 border-white z-10">
+                                        <div
+                                            className={`w-full h-full transition-all duration-500 ${activeStep >= index
+                                                ? "bg-doola-yellow rounded-full"
+                                                : "bg-white border-2 border-gray-300 rounded-sm"
+                                                }`}
+                                            data-testid={`step-shape-${index}`}
+                                        />
+                                    </div>
+
+                                    {/* Step Details */}
+                                    <div
+                                        className={`w-5/12 ${index % 2 === 0 ? "pl-20" : "pr-20"
+                                            }`}
+                                    >
+                                        <div
+                                            className="bg-doola-yellow/20 rounded-2xl p-8"
+                                            data-testid={`step-details-${index}`}
+                                        >
+                                            <p className="text-gray-700 mb-6 leading-relaxed">
+                                                {step.details.title}
+                                            </p>
+
+                                            <div className="space-y-4 mb-6">
+                                                {step.details.items.map((item: any, itemIndex: number) => (
+                                                    <div key={itemIndex} className="flex items-start space-x-3">
+                                                        <CheckCircle className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" />
+                                                        <div>
+                                                            <p className="font-medium text-gray-900">{item.title}</p>
+                                                            {item.subtitle && (
+                                                                <p className="text-sm text-gray-600 mt-1">
+                                                                    {item.subtitle}
+                                                                </p>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            {step.details.duration && (
+                                                <div className="flex items-center space-x-2 text-gray-600">
+                                                    <Clock className="h-4 w-4" />
+                                                    <span className="text-sm font-medium">
+                                                        {step.details.duration}
+                                                    </span>
+                                                </div>
+                                            )}
+
+                                            {step.details.duration2 && (
+                                                <div className="flex items-center space-x-2 text-gray-600 mt-2">
+                                                    <Clock className="h-4 w-4" />
+                                                    <span className="text-sm font-medium">
+                                                        {step.details.duration2}
+                                                    </span>
+                                                </div>
+                                            )}
+
+                                            {step.details.hasButton && (
+                                                <div className="mt-6">
+                                                    <Button
+                                                        className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
+                                                        data-testid="button-start-your-business-final"
+                                                    >
+                                                        Start Your Business
+                                                        <ArrowRight className="ml-2 h-5 w-5" />
+                                                    </Button>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+                </Reveal>
+
+                {/* Business Type Section */}
+                <Reveal>
+                <section
+                    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+                    data-testid="business-type-section"
+                >
+                    {/* Header */}
+                    <div className="text-center mb-12">
+                        <h2
+                            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+                            data-testid="business-type-headline"
+                        >
+                            LLC or C-Corp?
+                            <br />
+                            We'll Help You Decide.
+                        </h2>
+
+                        <button
+                            className="flex items-center mx-auto text-blue-600 hover:text-blue-700 font-medium"
+                            data-testid="take-quiz-link"
+                        >
+                            Take our Quiz <ArrowRight className="ml-1 h-4 w-4" />
+                        </button>
+                    </div>
+
+                    {/* Tabs */}
+                    <div className="flex justify-center mb-12">
+                        <div className="flex bg-gray-50 rounded-lg p-1" data-testid="business-type-tabs">
+                            <button
+                                onClick={() => switchBusinessType("LLC")}
+                                className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "LLC"
+                                    ? "bg-white text-gray-900 shadow-sm"
+                                    : "text-gray-600 hover:text-gray-900"
+                                    }`}
+                                data-testid="tab-llc"
+                            >
+                                <Users className="h-4 w-4" />
+                                <span>LLC</span>
+                            </button>
+                            <button
+                                onClick={() => switchBusinessType("C-Corp")}
+                                className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "C-Corp"
+                                    ? "bg-white text-gray-900 shadow-sm"
+                                    : "text-gray-600 hover:text-gray-900"
+                                    }`}
+                                data-testid="tab-c-corp"
+                            >
+                                <Building className="h-4 w-4" />
+                                <span>C-Corp</span>
+                            </button>
+                            <button
+                                onClick={() => switchBusinessType("S-Corp")}
+                                className={`flex items-center space-x-2 px-6 py-3 rounded-md font-medium transition-all ${activeBusinessType === "S-Corp"
+                                    ? "bg-white text-gray-900 shadow-sm"
+                                    : "text-gray-600 hover:text-gray-900"
+                                    }`}
+                                data-testid="tab-s-corp"
+                            >
+                                <Edit className="h-4 w-4" />
+                                <span>S-Corp</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        {/* Left Column - Image */}
+                        <div className="relative">
+                            <div
+                                className="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-900 to-orange-800"
+                                style={{ width: "542px", height: "492px" }}
+                                data-testid="business-type-image"
+                            >
+                                <img
+                                    src={businessTypes[activeType].image}
+                                    alt="Business owner"
+                                    className="w-full h-full object-cover rounded-2xl"
+                                />
+                                {businessTypes[activeType].overlayText && (
+                                    <div className="absolute bottom-6 left-6" data-testid="image-overlay-text">
+                                        <div className="bg-black/70 rounded-lg p-4 text-white backdrop-blur-sm">
+                                            <p className="text-lg leading-relaxed">
+                                                <span className="font-semibold">Siddharth</span> is an
+                                                <br />
+                                                <span className="font-semibold">Amazon Seller</span> who
+                                                <br />
+                                                started a <span className="font-semibold text-doola-yellow">US LLC</span>
+                                                <br />
+                                                from <span className="font-semibold">India</span>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Right Column - Business Type Info */}
+                        <div className="space-y-6">
+                            <h3 className="text-2xl font-bold text-gray-900" data-testid="business-type-title">
+                                {businessTypes[activeType].title}
+                            </h3>
+
+                            {businessTypes[activeType].subtitle && (
+                                <p className="text-gray-700 font-medium text-lg" data-testid="business-type-subtitle">
+                                    {businessTypes[activeType].subtitle}
+                                </p>
                             )}
-                        </div>
-                    </div>
 
-                    {/* Right Column - Business Type Info */}
-                    <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-gray-900" data-testid="business-type-title">
-                            {businessTypes[activeType].title}
-                        </h3>
-
-                        {businessTypes[activeType].subtitle && (
-                            <p className="text-gray-700 font-medium text-lg" data-testid="business-type-subtitle">
-                                {businessTypes[activeType].subtitle}
+                            <p className="text-gray-600 leading-relaxed" data-testid="business-type-description">
+                                {businessTypes[activeType].description}
                             </p>
-                        )}
 
-                        <p className="text-gray-600 leading-relaxed" data-testid="business-type-description">
-                            {businessTypes[activeType].description}
-                        </p>
-
-                        {/* Pros */}
-                        <div className="space-y-3">
-                            {businessTypes[activeType].pros.map((pro, index) => (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                                    <span className="text-gray-700" data-testid={`pro-${index}`}>
-                                        {pro}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Cons */}
-                        <div className="space-y-3">
-                            {businessTypes[activeType].cons.map((con, index) => (
-                                <div key={index} className="flex items-start space-x-3">
-                                    <X className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                                    <span className="text-gray-700" data-testid={`con-${index}`}>
-                                        {con}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-      {/* Business-in-a-Box Pricing Card */}
-      <section className="bg-[#ffeef2] px-6 py-16">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
-          <div className="p-10">
-            <h2 className="text-4xl font-extrabold">What If Today Was The Day?</h2>
-            <br />
-            <p>Your dream business is waiting, let's get it off the ground.</p>
-            <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">
-              Plans & Pricing →
-            </PillButton>
-          </div>
-
-          <div className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div className="flex flex-col">
-              <div className="flex items-start gap-4">
-                <div className="flex-grow">
-                  <div className="flex items-center gap-2">
-                    <Rocket className="h-5 w-5 text-gray-700" />
-                    <h3 className="text-xl font-bold text-gray-900">Starter</h3>
-                  </div>
-                  <div className="mt-4 text-gray-600 leading-relaxed">
-                    Dedicated Human Bookkeeper + Bookkeeping Software + Business Analytics Software + State & IRS Tax Filings + CPA Consultation.
-                  </div>
-                </div>
-                <div className="flex flex-col items-end">
-                  <div className="rounded-2xl bg-gray-50 px-6 py-3">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl font-bold text-gray-900">$297</span>
-                      <span className="text-gray-600">/yr</span>
-                    </div>
-                  </div>
-                  <button className="mt-4 rounded-full p-3 bg-[#eeeeee] text-black hover:bg-black hover:text-white transition-colors">
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-            {/* Blog Section */}
-            <section
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
-                data-testid="blog-section"
-            >
-                {/* Header */}
-                <Resources />
-            </section>
-            {/* Extras */}
-            <section className="bg-gray-50 px-6 py-16">
-                <div className="mx-auto max-w-7xl">
-                    <h2 className="mb-12 text-center text-4xl font-extrabold">The Extras That Set You Up for Success.</h2>
-                    <div className="grid gap-8 md:grid-cols-3">
-                        <div className="rounded-3xl bg-yellow-100 p-8">
-                            <div className="mb-6 grid h-12 w-12 place-items-center"><Rocket className="h-8 w-8 text-gray-700" /></div>
-                            <h3 className="mb-3 text-2xl font-bold">Incorporation</h3>
-                            <p className="mb-6 text-gray-700">We simplify incorporation by handling all paperwork and support, so you can focus on growth.</p>
-                            <button className="mb-6 font-semibold text-yellow-700 hover:underline">Start Your Business →</button>
-                            <div className="rounded-xl bg-white p-4">
-                                <div className="mb-2 flex items-center gap-2">
-                                    <div className="h-3 w-3 rounded-full bg-yellow-400" />
-                                    <span className="text-sm font-semibold">Formation Completed</span>
-                                </div>
-                                <div className="space-y-1 text-xs text-gray-600">
-                                    <div>✓ Operating Agreement</div>
-                                    <div>✓ Company Profile</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="rounded-3xl bg-pink-100 p-8">
-                            <div className="mb-6 grid h-12 w-12 place-items-center"><Sparkles className="h-8 w-8 text-gray-700" /></div>
-                            <h3 className="mb-3 text-2xl font-bold">Accounting & Bookkeeping</h3>
-                            <p className="mb-6 text-gray-700">We deliver expert accounting and bookkeeping services with precision, and industry-wide expertise.</p>
-                            <button className="mb-6 font-semibold text-pink-700 hover:underline">Analyze Your Sales →</button>
+                            {/* Pros */}
                             <div className="space-y-3">
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-orange-400" /><span className="text-sm">Total Orders</span></div>
-                                    <span className="text-sm font-semibold">213</span>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-green-400" /><span className="text-sm">Total Orders</span></div>
-                                    <span className="text-sm font-semibold">189</span>
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-gray-300" /><span className="text-sm text-gray-400">Total Orders</span></div>
-                                    <span className="text-sm text-gray-400">82</span>
-                                </div>
+                                {businessTypes[activeType].pros.map((pro, index) => (
+                                    <div key={index} className="flex items-start space-x-3">
+                                        <Check className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                                        <span className="text-gray-700" data-testid={`pro-${index}`}>
+                                            {pro}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
-                        </div>
-                        <div className="rounded-3xl bg-blue-100 p-8">
-                            <div className="mb-6 grid h-12 w-12 place-items-center"><Clock className="h-8 w-8 text-gray-700" /></div>
-                            <h3 className="mb-3 text-2xl font-bold">Trademark & Licensing</h3>
-                            <p className="mb-6 text-gray-700">We safeguard your brand’s identity with expert trademark services, protecting its integrity and uniqueness.</p>
-                            <button className="mb-6 font-semibold text-blue-700 hover:underline">Track Your Books →</button>
-                            <div className="rounded-xl bg-white p-4">
-                                <div className="text-sm text-blue-600">Total Revenue</div>
-                                <div className="text-xl font-bold text-blue-600">$112,780</div>
-                                <svg className="mt-2 h-8 w-full" viewBox="0 0 120 30">
-                                    <path d="M0,25 Q30,15 60,20 T120,10" stroke="#3b82f6" strokeWidth="3" fill="none" />
-                                    <circle cx="120" cy="10" r="3" fill="#3b82f6" />
-                                </svg>
+
+                            {/* Cons */}
+                            <div className="space-y-3">
+                                {businessTypes[activeType].cons.map((con, index) => (
+                                    <div key={index} className="flex items-start space-x-3">
+                                        <X className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
+                                        <span className="text-gray-700" data-testid={`con-${index}`}>
+                                            {con}
+                                        </span>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                </Reveal>
+                {/* Business-in-a-Box Pricing Card */}
+                <Reveal>
+                <section className="bg-[#d6b4fc] px-6 py-16">
+                    <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
+                        <div className="p-10">
+                            <h2 className="text-4xl font-extrabold">What If Today Was The Day?</h2>
+                            <br />
+                            <p>Your dream business is waiting, let's get it off the ground.</p>
+                            <PillButton className="mt-12 bg-black text-white hover:bg-gray-800">
+                                Plans & Pricing →
+                            </PillButton>
+                        </div>
 
-            {/* Testimonials Section */}
-            <Testimonials />
+                        <div className="rounded-3xl bg-white p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div className="flex flex-col">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-grow">
+                                        <div className="flex items-center gap-2">
+                                            <Rocket className="h-5 w-5 text-gray-700" />
+                                            <h3 className="text-xl font-bold text-gray-900">Starter</h3>
+                                        </div>
+                                        <div className="mt-4 text-gray-600 leading-relaxed">
+                                            Dedicated Human Bookkeeper + Bookkeeping Software + Business Analytics Software + State & IRS Tax Filings + CPA Consultation.
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col items-end">
+                                        <div className="rounded-2xl bg-gray-50 px-6 py-3">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-2xl font-bold text-gray-900">$297</span>
+                                                <span className="text-gray-600">/yr</span>
+                                            </div>
+                                        </div>
+                                        <button className="mt-4 rounded-full p-3 bg-[#eeeeee] text-black hover:bg-black hover:text-white transition-colors">
+                                            <ChevronRight className="h-5 w-5" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </Reveal>
+                {/* Blog Section */}
+                <Reveal>
+                <section
+                    className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+                    data-testid="blog-section"
+                >
+                    {/* Header */}
+                    <Resources />
+                </section>
+                </Reveal>
+                {/* Extras */}
+                <Reveal>
+                <section className="bg-gray-50 px-6 py-16">
+                    <div className="mx-auto max-w-7xl">
+                        <h2 className="mb-12 text-center text-4xl font-extrabold">The Extras That Set You Up for Success.</h2>
+                        <div className="grid gap-8 md:grid-cols-3">
+                            <div className="rounded-3xl bg-yellow-100 p-8">
+                                <div className="mb-6 grid h-12 w-12 place-items-center"><Rocket className="h-8 w-8 text-gray-700" /></div>
+                                <h3 className="mb-3 text-2xl font-bold">Incorporation</h3>
+                                <p className="mb-6 text-gray-700">We simplify incorporation by handling all paperwork and support, so you can focus on growth.</p>
+                                <button className="mb-6 font-semibold text-yellow-700 hover:underline">Start Your Business →</button>
+                                <div className="rounded-xl bg-white p-4">
+                                    <div className="mb-2 flex items-center gap-2">
+                                        <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                                        <span className="text-sm font-semibold">Formation Completed</span>
+                                    </div>
+                                    <div className="space-y-1 text-xs text-gray-600">
+                                        <div>✓ Operating Agreement</div>
+                                        <div>✓ Company Profile</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="rounded-3xl bg-pink-100 p-8">
+                                <div className="mb-6 grid h-12 w-12 place-items-center"><Sparkles className="h-8 w-8 text-gray-700" /></div>
+                                <h3 className="mb-3 text-2xl font-bold">Accounting & Bookkeeping</h3>
+                                <p className="mb-6 text-gray-700">We deliver expert accounting and bookkeeping services with precision, and industry-wide expertise.</p>
+                                <button className="mb-6 font-semibold text-pink-700 hover:underline">Analyze Your Sales →</button>
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-orange-400" /><span className="text-sm">Total Orders</span></div>
+                                        <span className="text-sm font-semibold">213</span>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-green-400" /><span className="text-sm">Total Orders</span></div>
+                                        <span className="text-sm font-semibold">189</span>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-2"><div className="h-4 w-4 rounded bg-gray-300" /><span className="text-sm text-gray-400">Total Orders</span></div>
+                                        <span className="text-sm text-gray-400">82</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="rounded-3xl bg-blue-100 p-8">
+                                <div className="mb-6 grid h-12 w-12 place-items-center"><Clock className="h-8 w-8 text-gray-700" /></div>
+                                <h3 className="mb-3 text-2xl font-bold">Trademark & Licensing</h3>
+                                <p className="mb-6 text-gray-700">We safeguard your brand’s identity with expert trademark services, protecting its integrity and uniqueness.</p>
+                                <button className="mb-6 font-semibold text-blue-700 hover:underline">Track Your Books →</button>
+                                <div className="rounded-xl bg-white p-4">
+                                    <div className="text-sm text-blue-600">Total Revenue</div>
+                                    <div className="text-xl font-bold text-blue-600">$112,780</div>
+                                    <svg className="mt-2 h-8 w-full" viewBox="0 0 120 30">
+                                        <path d="M0,25 Q30,15 60,20 T120,10" stroke="#3b82f6" strokeWidth="3" fill="none" />
+                                        <circle cx="120" cy="10" r="3" fill="#3b82f6" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </Reveal>
 
-            {/* FAQ Section */}
-            <FAQ />
-            <FinalCTA />
-            <Footermain />
+                {/* Testimonials Section */}
+                <Reveal>
+                <Testimonials />
+                </Reveal>
+                {/* FAQ Section */}
+                <Reveal>
+                <FAQ />
+                </Reveal>
+                <Reveal>
+                <FinalCTA />
+                </Reveal>
+                <Reveal>
+                <Footermain />
+                </Reveal>
         </div>
     );
 }

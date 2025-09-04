@@ -7,6 +7,7 @@ import FinalCTA from "@/components/final-cta";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Footermain from "@/components/footer-main";
+import Reveal from "@/components/Reveal";
 
 /** =========================
  * Animated Text Component
@@ -552,129 +553,134 @@ export default function Home() {
     <div className="bg-white">
       {/*Header Section */}
       <Header />
-      {/* Hero Section */}
-      <section className="bg-white py-16" data-testid="hero-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <AnimatedText />
-            <p className="text-gray-600 text-lg" data-testid="hero-subtitle">
-              Unlock the best all-in-one platform in the industry.
-            </p>
-          </div>
 
-          {/* Funding Banner */}
-          <div
-            className="bg-black rounded-2xl p-8 mb-16 flex flex-col md:flex-row items-center justify-between text-white gap-6"
-            data-testid="funding-banner"
-          >
-            <div className="flex items-start md:items-center gap-4 text-left">
-              <div className="text-yellow-400 text-2xl">
-                <i className="fas fa-trophy" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-2">
-                  Win <span className="text-yellow-400">$5,000</span> in Startup Funding
-                </h3>
-                <p className="text-gray-300">
-                  Access to the Wealth Empires Founders Fund is available to Total Compliance or
-                  Business-in-a-Box™ Annual plan subscribers
-                </p>
-              </div>
+      <Reveal>
+        {/* Hero Section */}
+        <section className="bg-white py-16" data-testid="hero-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="mb-8">
+              <AnimatedText />
+              <p className="text-gray-600 text-lg" data-testid="hero-subtitle">
+                Unlock the best all-in-one platform in the industry.
+              </p>
             </div>
-            <Button
-              className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
-              data-testid="button-learn-more"
+
+            {/* Funding Banner */}
+            <div
+              className="bg-black rounded-2xl p-8 mb-16 flex flex-col md:flex-row items-center justify-between text-white gap-6"
+              data-testid="funding-banner"
             >
-              Learn More <i className="fas fa-arrow-right ml-2" />
-            </Button>
-          </div>
-
-          {/* Pricing Cards */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-7xl mx-auto"
-            data-testid="pricing-cards-grid"
-          >
-            {/* First Column - Starter and Pulse */}
-            <div className="space-y-6">
-              <PricingCard {...pricingCards[0]} />
-              <PricingCard {...pricingCards[1]} />
-            </div>
-
-            {/* Second Column - Total Compliance */}
-            <div className="flex">
-              <div className="w-full">
-                <PricingCard {...pricingCards[2]} />
+              <div className="flex items-start md:items-center gap-4 text-left">
+                <div className="text-yellow-400 text-2xl">
+                  <i className="fas fa-trophy" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Win <span className="text-yellow-400">$5,000</span> in Startup Funding
+                  </h3>
+                  <p className="text-gray-300">
+                    Access to the Wealth Empires Founders Fund is available to Total Compliance or
+                    Business-in-a-Box™ Annual plan subscribers
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Third Column - Business-in-a-Box™ */}
-            <div className="flex">
-              <div className="w-full">
-                <PricingCard {...pricingCards[3]} />
-              </div>
-            </div>
-          </div>
-
-          {/* Deduct Up to Section */}
-          <div className="bg-[#eef3fe] py-16 mb-16 rounded-3xl" data-testid="deduct-section">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h2 className="text-4xl font-bold mb-6">
-                Deduct Up to <span className="text-blue-500">$5,000</span> in Startup Costs.
-              </h2>
-              <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
-                You can deduct up to $5,000 for organizational expenses in the year your business is formed
-                (including what you spend with Wealth Empires). Your Wealth Empires subscription is tax
-                deductible and can be used to offset some of the taxes that your business may need to pay.
-              </p>
-              <p className="text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
-                These expenses must be recorded in your business accounting books to qualify as a tax
-                deduction, and you must also retain and maintain receipts for these expenses.
-              </p>
               <Button
-                className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800"
-                data-testid="button-learn-more-deduct"
+                className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
+                data-testid="button-learn-more"
               >
                 Learn More <i className="fas fa-arrow-right ml-2" />
               </Button>
             </div>
+
+            {/* Pricing Cards */}
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 max-w-7xl mx-auto"
+              data-testid="pricing-cards-grid"
+            >
+              {/* First Column - Starter and Pulse */}
+              <div className="space-y-6">
+                <PricingCard {...pricingCards[0]} />
+                <PricingCard {...pricingCards[1]} />
+              </div>
+
+              {/* Second Column - Total Compliance */}
+              <div className="flex">
+                <div className="w-full">
+                  <PricingCard {...pricingCards[2]} />
+                </div>
+              </div>
+
+              {/* Third Column - Business-in-a-Box™ */}
+              <div className="flex">
+                <div className="w-full">
+                  <PricingCard {...pricingCards[3]} />
+                </div>
+              </div>
+            </div>
+
+            {/* Deduct Up to Section */}
+            <div className="bg-[#eef3fe] py-16 mb-16 rounded-3xl" data-testid="deduct-section">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 className="text-4xl font-bold mb-6">
+                  Deduct Up to <span className="text-blue-500">$5,000</span> in Startup Costs.
+                </h2>
+                <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
+                  You can deduct up to $5,000 for organizational expenses in the year your business is formed
+                  (including what you spend with Wealth Empires). Your Wealth Empires subscription is tax
+                  deductible and can be used to offset some of the taxes that your business may need to pay.
+                </p>
+                <p className="text-gray-600 text-sm mb-8 max-w-3xl mx-auto">
+                  These expenses must be recorded in your business accounting books to qualify as a tax
+                  deduction, and you must also retain and maintain receipts for these expenses.
+                </p>
+                <Button
+                  className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800"
+                  data-testid="button-learn-more-deduct"
+                >
+                  Learn More <i className="fas fa-arrow-right ml-2" />
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
 
-      {/* Feature Comparison Table */}
-      <FeatureTable />
+      <Reveal>
+        {/* Feature Comparison Table */}
+        <FeatureTable />
+      </Reveal>
 
-      {/* Best Value Section */}
-      <section className="bg-white py-16" data-testid="best-value-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-4 text-black">The Best Value in the Industry</h2>
-          <p className="text-black text-lg mb-8">
-            Whether you're looking for comprehensive features or unbeatable savings,
-            <br />
-            our solution stands out as the most affordable choice.
-          </p>
+      <Reveal>
+        {/* Best Value Section */}
+        <section className="bg-white py-16" data-testid="best-value-section">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-4 text-black">The Best Value in the Industry</h2>
+            <p className="text-black text-lg mb-8">
+              Whether you're looking for comprehensive features or unbeatable savings,
+              <br />
+              our solution stands out as the most affordable choice.
+            </p>
 
-          <Button
-            className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 mb-12"
-            data-testid="button-compare"
-          >
-            Compare Now <i className="fas fa-arrow-right ml-2" />
-          </Button>
+            <Button
+              className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 mb-12"
+              data-testid="button-compare"
+            >
+              Compare Now <i className="fas fa-arrow-right ml-2" />
+            </Button>
 
-          {/* Service Cards Grid as Image */}
-          <div className="flex justify-center" data-testid="service-cards-grid">
-            <img
-              src="https://www.doola.com/wp-content/uploads/2025/07/compare-desk.png.webp"
-              alt="Service comparison cards showing pilot, quickbooks, and other services"
-              className="max-w-full h-auto rounded-xl"
-            />
+            {/* Service Cards Grid as Image */}
+            <div className="flex justify-center" data-testid="service-cards-grid">
+              <img
+                src="https://www.doola.com/wp-content/uploads/2025/07/compare-desk.png.webp"
+                alt="Service comparison cards showing pilot, quickbooks, and other services"
+                className="max-w-full h-auto rounded-xl"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Reveal>
 
-      {/* FAQ Section */}
       <FAQ />
-      {/* Bottom Hero Section */}
       <FinalCTA />
       <Footermain />
     </div>
