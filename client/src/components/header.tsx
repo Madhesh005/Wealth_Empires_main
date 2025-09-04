@@ -33,7 +33,7 @@ export default function Header() {
             <img
               src={logo}
               alt="Wealth Empires Logo"
-              className="w-16 h-20 object-contain"
+              className="w-12 h-12 object-contain"
               style={{ verticalAlign: "middle" }}
             />
             <span className="text-2xl font-inter text-black">Wealth Empires</span>
